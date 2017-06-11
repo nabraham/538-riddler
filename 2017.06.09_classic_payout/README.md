@@ -106,7 +106,7 @@ Stop whenever you pick an evelope that is greater than any previous choice.
 
 I created a script that enumerates all possible strategies by exploring all possible decision combinations:
 
-![decision tree](./Envelopes.svg)
+![decision tree](https://github.com/nabraham/538-riddler/raw/master/2017.06.09_classic_payout/Envelopes.png)
 
 D = draw, P = stop, S = Smallest, M = Medium, L = Large
 
