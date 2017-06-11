@@ -101,3 +101,37 @@ So we should stop.
 ### Summary
 
 Stop whenever you pick an evelope that is greater than any previous choice.
+
+### Testing
+
+I created a script that enumerates all possible strategies by exploring all possible decision combinations:
+
+![decision tree](./Envelopes.svg)
+
+D = draw, P = stop, S = Smallest, M = Medium, L = Large
+
+Green nodes represent places where we have an option to stop or continue.  The numbers are the node id used in the [python script](./payout.py).  I generated 10,000* test sets and ran them accros all 82 unique strategies.  Here are the top  5 scoring strategies:
+
+```
+0.886300: (1, 3)-(4, 7)-(5, 8)-(10, 17)-(11, 19)-(12, 20)
+0.894300: (1, 3)-(4, 7)-(5, 8)-(10, 17)-(11, 18)-(12, 20)
+1.064200: (1, 3)-(4, 7)-(5, 9)-(10, 17)-(11, 19)-(12, 20)-(13, 23)-(14, 25)-(15, 26)
+1.067100: (1, 3)-(4, 7)-(5, 9)-(10, 17)-(11, 19)-(12, 20)-(13, 23)-(14, 24)-(15, 26)
+1.072200: (1, 3)-(4, 7)-(5, 9)-(10, 17)-(11, 18)-(12, 20)-(13, 23)-(14, 25)-(15, 26)
+```
+The score (before the colon) is the average position of the prize chosen from biggest to smallest:
+
+* D = 0
+* C = 1
+* B = 2
+* A = 3
+
+As predicted, the best scoring strategy is the one that stops whenever we see a bigger number.  The pairs on the right side of the colon are the edges at decision points in the strategy.  The worst strategy turned out to be:
+
+```
+2.124500: (1, 3)-(4, 6)-(5, 9)-(13, 22)-(14, 24)-(15, 27)
+```
+Which is stop drawing after you encounter a smaller prize.
+
+
+*slightly less than 10,000 due to duplicates
