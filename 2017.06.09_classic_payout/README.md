@@ -110,7 +110,7 @@ I created a script that enumerates all possible strategies by exploring all poss
 
 D = draw, P = stop, S = Smallest, M = Medium, L = Large
 
-Green nodes represent places where we have an option to stop or continue.  The numbers are the node id used in the [python script](./payout.py).  I generated 10,000* test sets and ran them accros all 82 unique strategies.  Here are the top  5 scoring strategies:
+Green nodes represent places where we have an option to stop or continue.  The numbers are the node id used in the [python script](./payout.py).  I generated 10,000* test sets and ran them across all 82 unique strategies.  Here are the top  5 scoring strategies:
 
 ```
 0.886300: (1, 3)-(4, 7)-(5, 8)-(10, 17)-(11, 19)-(12, 20)
