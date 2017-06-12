@@ -77,7 +77,7 @@ One of the following happened:
 
 | Envelope | likelihood | chances of improving by<br>opening a 4th envelope |
 | -------- | ---------- | ------------------------------------------------- |
-| A | 2/4 | 50% |
+| C | 2/4 | 50% |
 | B | 2/4 | 50% |
 
 So we can either continue or stop.  For ease of summarizing the overal strategy, we will stop.
